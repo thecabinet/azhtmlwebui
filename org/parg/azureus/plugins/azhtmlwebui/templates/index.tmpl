@@ -141,7 +141,6 @@ var page_url_simple	= unescape(escape("<tmpl_var page>"))
                   <th><tmpl_var th_ULspeed></th>
                   <th><tmpl_var th_seeds></th>
                   <th><tmpl_var th_peers></th>
-                  <th><tmpl_var th_shareRatio></th>
                   <th><tmpl_var th_ETA></th>
                   <th><tmpl_var th_availability></th>
                   <tmpl_if view_only><tmpl_else><th>&nbsp;</th></tmpl_if>
@@ -174,7 +173,6 @@ var page_url_simple	= unescape(escape("<tmpl_var page>"))
                 <td><tmpl_var torrent_ul_speed></td>
                 <td<tmpl_if torrent_isDLing> class="seeds"</tmpl_if>><tmpl_var torrent_seeds> (<tmpl_var torrent_total_seeds>)</td>
                 <td<tmpl_if torrent_isDLing> class="peers"</tmpl_if>><tmpl_var torrent_peers> (<tmpl_var torrent_total_peers>)</td>
-                <td><tmpl_var torrent_share_ratio></td>
 				<td><tmpl_var torrent_eta></td>
 				<td><tmpl_var torrent_avail></td>
 				<tmpl_if view_only><tmpl_else><td><a href="#" onMouseover="showmenu(event, <tmpl_var __COUNTER__>, 0, 'rem', 'false', 'false')" onMouseout="delayhidemenu()">R.</a></td></tmpl_if>
@@ -207,7 +205,6 @@ var page_url_simple	= unescape(escape("<tmpl_var page>"))
                   <th><tmpl_var th_uploaded></th>
                   <th><tmpl_var th_seeds></th>
                   <th><tmpl_var th_peers></th>
-                  <th><tmpl_var th_shareRatio></th>
                   <th><tmpl_var th_availability></th>
                   <tmpl_if view_only><tmpl_else><th>&nbsp;</th></tmpl_if>
               </tr>
@@ -236,7 +233,6 @@ var page_url_simple	= unescape(escape("<tmpl_var page>"))
                 <td><tmpl_var torrent_uploaded></td>
                 <td<tmpl_if torrent_isCDing> class="seeds"</tmpl_if>><tmpl_var torrent_seeds> (<tmpl_var torrent_total_seeds>)</td>
                 <td<tmpl_if torrent_isCDing> class="peers"</tmpl_if>><tmpl_var torrent_peers> (<tmpl_var torrent_total_peers>)</td>
-                <td><span class="sr<tmpl_if isFP>fp</tmpl_if>"><tmpl_var torrent_share_ratio></span></td>
                 <td><tmpl_var torrent_avail></td>
 				<tmpl_if view_only><tmpl_else><td><a href="#" onMouseover="showmenu(event, <tmpl_var __COUNTER__>, 1, 'rem', 'false', 'false')" onMouseout="delayhidemenu()">R.</a></td></tmpl_if>
 			 </tr>
