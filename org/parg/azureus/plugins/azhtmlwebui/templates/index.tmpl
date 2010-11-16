@@ -131,7 +131,6 @@ var page_url_simple	= unescape(escape("<tmpl_var page>"))
                   <th><tmpl_var th_torrent></th>
                   <th>&nbsp;</th>
                   <th>&nbsp;</th>
-                  <th><tmpl_var th_category></th>
                   <tmpl_if view_only><tmpl_else><th><tmpl_var th_commands></th></tmpl_if>
                   <th><tmpl_var th_status></th>
                   <th><tmpl_var th_size></th>
@@ -158,8 +157,6 @@ var page_url_simple	= unescape(escape("<tmpl_var page>"))
                 <td>
                 	<tmpl_if torrent_has_magnet><span><a href="<tmpl_var torrent_magnet>">&curren;</a></span></tmpl_if>
 				</td>
-				<td id="c<tmpl_var __COUNTER__>"><a href="#" onMouseover="showmenu(event, <tmpl_var __COUNTER__>, 0, 'cat', 'false', 'false')" onMouseout="delayhidemenu()"><tmpl_var torrent_category></a>
-					</td>
                 <tmpl_if view_only><tmpl_else><td>
                 			<tmpl_if torrent_isDLing>
                 				<a href="<tmpl_var page_url>?stop=<tmpl_var torrent_hash_short>"><tmpl_var cmd_stop></a>
@@ -203,7 +200,6 @@ var page_url_simple	= unescape(escape("<tmpl_var page>"))
                   <th><tmpl_var th_torrent></th>
                   <th>&nbsp;</th>
                   <th>&nbsp;</th>
-                  <th><tmpl_var th_category></th>
                   <tmpl_if view_only><tmpl_else><th><tmpl_var th_commands></th></tmpl_if>
                   <th><tmpl_var th_status></th>
                   <th><tmpl_var th_ULspeed></th>
@@ -227,7 +223,6 @@ var page_url_simple	= unescape(escape("<tmpl_var page>"))
                 <td>
                 	<tmpl_if torrent_has_magnet><span><a href="<tmpl_var torrent_magnet>">&curren;</a></span></tmpl_if>
                 </td>
-                <td id="c<tmpl_var __COUNTER__>"><a href="#" onMouseover="showmenu(event, <tmpl_var __COUNTER__>, 1, 'cat', 'false', 'false')" onMouseout="delayhidemenu()"><tmpl_var torrent_category></a></td>
                 <tmpl_if view_only><tmpl_else><td>
                 <tmpl_if torrent_isCDing>
                 <a href="<tmpl_var page_url>&amp;stop=<tmpl_var torrent_hash_short>"><tmpl_var cmd_stop></a> <tmpl_if torrent_isFStart>(<a href="<tmpl_var page_url>&amp;fstop=<tmpl_var torrent_hash_short>"><tmpl_var cmd_unforce></a>)<tmpl_else>(<a href="<tmpl_var page_url>&amp;fstart=<tmpl_var torrent_hash_short>"><tmpl_var cmd_force></a>)</tmpl_if>
