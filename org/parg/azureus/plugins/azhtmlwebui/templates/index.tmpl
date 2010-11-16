@@ -129,8 +129,6 @@ var page_url_simple	= unescape(escape("<tmpl_var page>"))
               <tr> 
               	  <th>#</th>
                   <th><tmpl_var th_torrent></th>
-                  <th>&nbsp;</th>
-                  <th>&nbsp;</th>
                   <tmpl_if view_only><tmpl_else><th><tmpl_var th_commands></th></tmpl_if>
                   <th><tmpl_var th_status></th>
                   <th><tmpl_var th_size></th>
@@ -150,12 +148,6 @@ var page_url_simple	= unescape(escape("<tmpl_var page>"))
                 <td>
                 	<span class="a<tmpl_if torrent_isDLing>1</tmpl_if>" id="tor<tmpl_var __COUNTER__>" title="<tmpl_var torrent_name>"><a href="index.tmpl?d=d&amp;t=<tmpl_var torrent_hash_short>"><tmpl_var torrent_short_name></a></span>
                 </td>
-                <td>
-                	<tmpl_if torrent_ontracker><a  class="t" href="#" onMouseover="showmenu(event, <tmpl_var __COUNTER__>, 0, 'trm', 'false', 'false')" onMouseout="delayhidemenu()">&loz;</a></tmpl_if>
-                </td>
-                <td>
-                	<tmpl_if torrent_has_magnet><span><a href="<tmpl_var torrent_magnet>">&curren;</a></span></tmpl_if>
-				</td>
                 <tmpl_if view_only><tmpl_else><td>
                 			<tmpl_if torrent_isDLing>
                 				<a href="<tmpl_var page_url>?stop=<tmpl_var torrent_hash_short>"><tmpl_var cmd_stop></a>
@@ -196,8 +188,6 @@ var page_url_simple	= unescape(escape("<tmpl_var page>"))
               <tr> 
               	  <th>#</th>
                   <th><tmpl_var th_torrent></th>
-                  <th>&nbsp;</th>
-                  <th>&nbsp;</th>
                   <tmpl_if view_only><tmpl_else><th><tmpl_var th_commands></th></tmpl_if>
                   <th><tmpl_var th_status></th>
                   <th><tmpl_var th_ULspeed></th>
@@ -213,12 +203,6 @@ var page_url_simple	= unescape(escape("<tmpl_var page>"))
               	<td align="right"><a href="#" onMouseover="showmenu(event, <tmpl_var __COUNTER__>, 1, 'tor', <tmpl_if __FIRST__>'true'<tmpl_else>'false'</tmpl_if>, <tmpl_if __LAST__>'true'<tmpl_else>'false'</tmpl_if>)" onMouseout="delayhidemenu()"><tmpl_var torrent_position></a></td>
                 <td>
                 	<span class="a<tmpl_if torrent_isCDing>1</tmpl_if>" id="tor<tmpl_var __COUNTER__>" title="<tmpl_var torrent_name>"><a href="index.tmpl?d=d&amp;t=<tmpl_var torrent_hash_short>"><tmpl_var torrent_short_name></a></span>
-                </td>
-                <td>
-                	<tmpl_if torrent_ontracker><span><a class="t" href="#" onMouseover="showmenu(event, <tmpl_var __COUNTER__>, 1, 'trm', 'false', 'false')" onMouseout="delayhidemenu()"> &loz;</a></span></tmpl_if>
-                </td>
-                <td>
-                	<tmpl_if torrent_has_magnet><span><a href="<tmpl_var torrent_magnet>">&curren;</a></span></tmpl_if>
                 </td>
                 <tmpl_if view_only><tmpl_else><td>
                 <tmpl_if torrent_isCDing>
